@@ -1,11 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    /*id 'kotlin-kapt'*/
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
+    /*dataBinding {
+        enabled = true
+    }*/
 
     defaultConfig {
         applicationId "io.erehsawsaltul.mvvm"
@@ -33,6 +37,9 @@ android {
 }
 
 dependencies {
+
+    // notice that the compiler version must be the same as our gradle version
+    /*kapt 'com.android.databinding:compiler:3.1.4'*/
 
         def lifecycle_version = "2.2.0"
         def arch_version = "2.1.0"
